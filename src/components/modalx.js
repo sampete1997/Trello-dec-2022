@@ -41,7 +41,7 @@ const Modalx = (CreateMethod) => {
             <Button type="primary" onClick={showModal}>
                 Add new ➕
             </Button>
-            <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+            <Modal title="Create New" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
                 <input type="text" onChange={(event) => setValue(event.target.value)}></input>
                 {/*<Button type="primary" onClick={getName}>Add {createName} Name*/}
                 {/*</Button>*/}
