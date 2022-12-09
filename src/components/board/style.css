@@ -1,0 +1,61 @@
+.BoardContainer {
+    margin: 2rem 0rem 2rem 2rem;
+    background-image: url('https://wallpapercave.com/wp/wp2682885.jpg');
+    background-size: cover;
+    width: 14rem;
+    height: 10rem;
+    color: wheat;
+    padding-left: 0.5rem;
+}
+
+.BoardContainer h4{
+    color: white;
+}
+
+.board {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.newBoard{
+
+    width: 15%;
+    height: 10rem;
+    margin: 2rem 2rem 2rem 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(139, 141, 124, 0.09);
+    box-shadow: 1px 1px 3px 2px;
+    flex-direction: column;
+   
+}
+
+.inputName{
+
+    font-size: 0.8rem;
+    margin: 1rem;
+    padding: 0.2rem;
+}
+
+.newBoard button{
+    border: 0px;
+    background-color: rgba(255, 0, 0, 0.74);
+    margin: 1rem;
+    color: white;
+    font-size: 1rem;
+    padding: 0.3rem;
+    border-radius: 1rem;
+}
+
+.newBoard p {
+    margin: 1rem;
+}
+
+.links{
+    text-decoration: none;
+    color: white;
+}
