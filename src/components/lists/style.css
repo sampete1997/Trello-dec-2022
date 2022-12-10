@@ -1,0 +1,46 @@
+.listContainer {
+    display: flex;
+    overflow-x: auto;
+    width: 200vw;
+}
+
+.currentList {
+    margin: 50px;
+    margin: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0.5rem;
+    width: 200px;
+    background-color: white;
+    border: 0.1rem solid rgba(86, 86, 86, 0.07);
+}
+
+.currentList:hover {
+    background-color: #f6f6f6;
+}
+
+.listWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    background-color: white;
+}
+
+.newList {
+    width: 200px;
+    margin: 2rem 2rem 2rem 2rem;
+    padding: 1rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(139, 141, 124, 0.09);
+    box-shadow: 1px 1px 3px 2px;
+}
+
+.deleteCross {
+    cursor: pointer;
+}
+
+.deleteCross:hover {
+    transform: scale(1.2);
+}

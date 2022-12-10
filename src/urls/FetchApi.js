@@ -10,10 +10,9 @@ export function fetchListData(boardId) {
 export function createBoard(boardName) {
     const BoardUrl = `https://api.trello.com/1/boards/?name=${boardName}&key=3809ed5e6e7982289e01cb5f37faa707&token=5fe724fe933bd80756bc47a7b98a7be7051cf565e3a703fb39700cd6b95fcaab`
     return axios.post(BoardUrl)
-};
+}
 
-export const createList = (boardId, listName) => {
-
+export const createList = (listName, boardId) => {
     const ListUrl = `https://api.trello.com/1/boards/${boardId}/lists?name=${listName}&key=3809ed5e6e7982289e01cb5f37faa707&token=5fe724fe933bd80756bc47a7b98a7be7051cf565e3a703fb39700cd6b95fcaab`
     return axios.post(ListUrl)
 

@@ -5,8 +5,9 @@ import modalReducer from "./reducers/modalxReducer";
 
 const rootReducer = combineReducers({
     board:boardReducer,
-    list:listReducer,
-    modalx:modalReducer
+    lists:listReducer,
+    modalx:modalReducer,
+
 })
 
 const store = createStore(rootReducer)

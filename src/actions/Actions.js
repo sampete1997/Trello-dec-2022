@@ -6,10 +6,10 @@ module.exports = {
     isCreate:'isCreate',
     getBoardName:'getBoardName',
     UpdateRedux:'updateRedux',
-    getListName:'getListName',
+    getListData:'getListData',
     getListId:'getListId',
-
     //modal actions
     isOpen:"isOpen",
-    createNameMethod:"createNameMethod",
+    createListNameMethod:"createListNameMethod",
+    createBoardNameMethod : "createBoardNameMethod"
 }

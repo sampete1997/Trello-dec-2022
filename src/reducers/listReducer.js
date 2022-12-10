@@ -1,23 +1,16 @@
-import { getListName ,getListId} from "../actions/Actions"
+import { getListData ,getListId} from "../actions/Actions"
 
 const initialState = {
-
-    listName: '',
-    listId:''
-
+    listData: [{name:"solomon"},{name:"Lane"}],
 }
 
 function listReducer(state = initialState, action) {
 
     switch (action.type) {
 
-
-        case getListName:
-
+        case getListData:
             return {
-                ...state,
-
-                listName: action.payload
+                ...state, listData : action.payload
             }
 
         case getListId:
@@ -27,7 +20,6 @@ function listReducer(state = initialState, action) {
 
                 listId: action.payload
             }
-
 
         default:
             return state

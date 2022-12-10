@@ -1,6 +1,7 @@
-import {isOpen,createNameMethod} from "../actions/Actions"
+import {isOpen,createListNameMethod, createBoardNameMethod} from "../actions/Actions"
 const initialState = {
-    createName : '',
+    createBoardName : '',
+    createListName : '',
     isModalOpen: false
 }
 
@@ -11,8 +12,10 @@ function modalReducer(state = initialState, action) {
         case isOpen:
             return { isModalOpen:true}
 
-        case createNameMethod:
-            return { createName: action.payload }
+        case createBoardNameMethod:
+            return { createBoardName: action.payload }
+        case createListNameMethod:
+            return { createBoardName: action.payload }
 
         default:
             return state
