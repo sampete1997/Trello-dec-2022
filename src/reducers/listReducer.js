@@ -1,4 +1,4 @@
-import { getListData ,getListId} from "../actions/Actions"
+import {getListData, getListId, updateList} from "../actions/Actions"
 
 const initialState = {
     listData: [{name:"solomon"},{name:"Lane"}],
@@ -19,6 +19,10 @@ function listReducer(state = initialState, action) {
                 ...state,
 
                 listId: action.payload
+            }
+        case updateList:
+            return {
+                ...state, [updateList]: Math.random()
             }
 
         default:

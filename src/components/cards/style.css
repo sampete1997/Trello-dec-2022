@@ -1,3 +1,7 @@
 .cardContainer{
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.deleteItem{
+    cursor: pointer;
 }

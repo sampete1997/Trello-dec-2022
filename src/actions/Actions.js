@@ -8,8 +8,14 @@ module.exports = {
     UpdateRedux:'updateRedux',
     getListData:'getListData',
     getListId:'getListId',
+    updateList: "updateList",
     //modal actions
     isOpen:"isOpen",
     createListNameMethod:"createListNameMethod",
-    createBoardNameMethod : "createBoardNameMethod"
+    createBoardNameMethod : "createBoardNameMethod",
+    getCardData:"getCardData",
+    getCardDataObject:"getCardDataObject",
+    UpdateCards:"UpdateCards",
+    loader:"loader",
+    loaderOn:"loaderOn"
 }

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Button, Modal} from 'antd';
 import {useDispatch, useSelector} from "react-redux";
-import {createBoardNameMethod, createListNameMethod, UpdateRedux} from '../actions/Actions'
+import {createBoardNameMethod, createListNameMethod, updateList, UpdateRedux} from '../actions/Actions'
 import {createNewBoard, createNewList} from "./board/trelloApiFunctions";
 
 const Modalx = (props) => {
@@ -41,7 +41,7 @@ const Modalx = (props) => {
             let boardId = localStorage.getItem("boardId")
             console.log("board ID list", boardId)
             createNewList(value, boardId)
-                .then(res => dispatch({type: UpdateRedux}))
+                .then(res => dispatch({type: updateList}))
                 .catch(err => console.log(err))
         }
         setIsModalOpen(false);
