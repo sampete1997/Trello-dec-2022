@@ -10,12 +10,16 @@ module.exports = {
     getListId:'getListId',
     updateList: "updateList",
     //modal actions
-    isOpen:"isOpen",
+    isOpenCard:"isOpenCard",
     createListNameMethod:"createListNameMethod",
     createBoardNameMethod : "createBoardNameMethod",
     getCardData:"getCardData",
     getCardDataObject:"getCardDataObject",
     UpdateCards:"UpdateCards",
     loader:"loader",
-    loaderOn:"loaderOn"
+    loaderOn:"loaderOn",
+    getCheckListItems:"getCheckListItems",
+    checkListId:"checkListId",
+    updateCheckList:"updateCheckList",
+    checkListLoad: "checkListLoad"
 }

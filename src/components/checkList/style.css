@@ -1,0 +1,40 @@
+.checklistWrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px 10px 5px;
+}
+.deleteCheckList,.deleteCheckListItem{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+}
+.deleteCheckList:active{
+    background-color: rgba(255, 0, 0, 0.51);
+    transform: scale(1.2);
+    border-radius: 1rem;
+}
+
+.deleteCheckListItem:active{
+    background-color: rgba(255, 0, 0, 0.51);
+    border-radius: 1rem;
+}
+.itemLabel{
+    padding: 8px;
+}
+.itemContainer{
+    display: flex;
+    justify-content: space-between;
+    padding:5px;
+    width: 80%;
+    margin: 8px;
+    background-color: rgba(255, 217, 171, 0.8);
+}
+.AddItemWrapper{
+    padding: 5px;
+    margin: 8px;
+}
+
+.newCheckList{
+    margin-right: 8px ;
+}

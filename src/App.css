@@ -2,3 +2,10 @@ body {
   background-image: url("https://wallpapercave.com/wp/wp11321562.jpg");
   background-size: cover;
 }
+input{
+  border-radius: 3px;
+  border: 1px solid rgba(54, 54, 54, 0.78);
+  padding: 5px;
+  color: #323232;
+  font-style: normal;
+}

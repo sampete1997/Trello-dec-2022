@@ -2,6 +2,13 @@
     display: flex;
     justify-content: space-between;
 }
-.deleteItem{
+.cardName{
+    font-size: 1rem;
+    color: #3d3c3c;
+}
+.deleteItem,.cardName{
     cursor: pointer;
+}
+.cardName:active{
+    color: blue;
 }

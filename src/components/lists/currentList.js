@@ -71,12 +71,11 @@ export function CurrentList(props) {
             <div>
                 {cardDataObjects[props.currentList.id]===undefined? null : cardDataObjects[props.currentList.id].map((currentCard,index) => {
                     return (
-                        <CardComp cardDetails = {currentCard} index = {index}/>)
+                        <CardComp listName = {props.currentList.name} cardDetails = {currentCard} index = {index}/>)
                 })
                 }
                 <input type="textbox" placeholder={"Add new card"} className="addNewCard" value={newCardName} onChange={(e)=> setCardName(e.target.value)}></input>
                 <button className={"cardBtn"} onClick={()=> getCardName(newCardName,currentListID)}>Add card</button>
-                {/*{cardDataObjects[loader] === true ? <Spinner/> : <></> }*/}
 
             </div>
         </div>
