@@ -4,7 +4,7 @@ import { Spin } from 'antd';
 const antIcon = (
     <LoadingOutlined
         style={{
-            fontSize: 80,position: "absolute",
+            fontSize: 80,position: "fixed",
             left: "50%",
             top: "50%",
         }}
