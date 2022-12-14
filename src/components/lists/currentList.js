@@ -24,13 +24,13 @@ export function CurrentList(props) {
             var listCurrData = {}
             listCurrData[currListID] = fetchedCards.data || []
             console.log("successfully fetched cards data for id : ", fetchedCards.data)
-            console.log("$$$$$$$cardDataObject", cardDataObjects)
+            // console.log("$$$$$$$cardDataObject", cardDataObjects)
             let cardDataOfList = fetchedCards.data || []
             dispatch({type: getCardData, payload: cardDataOfList})
             dispatch({type: getCardDataObject,id: props.currentList.id,payload: cardDataOfList})
         }
         catch (err){
-            console.log('errrrrrrrrrrrrr fetching cards',err)
+            console.log('error fetching cards',err)
         }
 
     })()}, [currentListID,cardDataObjects.updateCards])

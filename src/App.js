@@ -7,18 +7,23 @@ import {loader} from "./actions/Actions";
 import Spinner from "./components/spinner";
 import React from "react";
 import {useSelector} from "react-redux";
+import ButtonAppBar from "./components/navBar/NavBar";
 
 function App() {
     const cardDataObjects = useSelector((state) => state.cards)
     return (
+        <>
+            <ButtonAppBar/>
     <div className="App" style={{pointerEvents: cardDataObjects[loader] === true ? "none" : "auto"}}>
         {cardDataObjects[loader] === true ? <Spinner/> : <></> }
+
       <Routes>
         <Route path='/' element={<Board/>} />
         <Route path='/board' element={<ListComp/>}/>
         <Route path='/card' element={<Modalx/>}/>
       </Routes>
     </div>
+            </>
   );
 }
 

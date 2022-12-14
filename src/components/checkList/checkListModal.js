@@ -7,7 +7,7 @@ import {
     deleteCheckItem,
     deleteCheckList,
     getCheckItems,
-    getCheckLists
+    getCheckLists, updateCheckItem
 } from "../../urls/FetchApi";
 import {useDispatch, useSelector} from "react-redux";
 import {getCheckListItems, loader, loaderOn, updateCheckList} from "../../actions/Actions";
@@ -102,7 +102,7 @@ export const CheckListModal = (props) => {
                                     </div>
                                     {checkListDataObject[checkList.id] === undefined ? null : checkListDataObject[checkList.id].map((item) => {
                                         return (
-                                            <ItemComp checkListID={checkList.id} checkListItem={item}/>
+                                            <ItemComp cardItemId={props.cardDetail.id} checkListID={checkList.id} checkListItem={item}/>
                                         )
                                     })
                                     }
@@ -156,7 +156,7 @@ export function CreateNewCheckList(props) {
 
 export function ItemComp(checkListProps) {
     const dispatch = useDispatch()
-
+    const status = checkListProps.checkListItem.state ==="complete" ? true : false
     function removeItem(checkListID, itemID) {
         deleteCheckItem(checkListID, itemID)
             .then((res) => {
@@ -167,9 +167,20 @@ export function ItemComp(checkListProps) {
         })
     }
 
+    function updateItemStatus(cardId, checkItemId, checkedStatus){
+        updateCheckItem (cardId, checkItemId, checkedStatus)
+            .then((res) => {
+                console.log("item status changed ! ::", res)
+                dispatch({type: updateCheckList})
+            }).catch((err) => {
+            console.log("error while status update of item :: ", err)
+        })
+    }
+
     return (<div className="itemContainer">
-        <input type="checkbox"/>
-        <label className="itemLabel">{checkListProps.checkListItem.name}</label>
+        <input type="checkbox" checked={status} onChange={(e)=>updateItemStatus(checkListProps.cardItemId, checkListProps.checkListItem.id, e.target.checked)}/>
+        {checkListProps.checkListItem.state ==="complete" ? <label style={{textDecoration:"line-through"}} >{checkListProps.checkListItem.name}</label>
+            :<label className="itemLabel">{checkListProps.checkListItem.name}</label>}
         <p onClick={() => removeItem(checkListProps.checkListID, checkListProps.checkListItem.id)}
            className="deleteCheckListItem">➖</p>
     </div>)

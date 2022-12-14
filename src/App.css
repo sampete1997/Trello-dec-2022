@@ -1,6 +1,5 @@
 body {
-  background-image: url("https://wallpapercave.com/wp/wp11321562.jpg");
-  background-size: cover;
+  background-color: rgba(255, 251, 0, 0.45);
 }
 input{
   border-radius: 3px;
